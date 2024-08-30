@@ -1,5 +1,5 @@
 # Thesis
-This directory contains the majority of stuff related to my thesis, including code, presentations, figures. Data is not stored here as it is too large.
+This directory contains the majority of code related to my thesis. Data is not stored here as it is too large.
 
 # Software Versions and Setup (for my computer, a different computer was used as well that required different versions for an RTX 4060Ti)
 Python 3.10.9
