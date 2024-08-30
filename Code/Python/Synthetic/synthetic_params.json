@@ -1,0 +1,337 @@
+{
+    "proof of failure": {
+        "use": "This is used for the initial graph to show that MUNET14 fails with square circle problem with different colours",
+        "network_name": "This is used with the architecture TODO",
+
+
+        "z_dim":        500,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,10,10],
+        "max_radii":        [0,15,15],
+        "phase_num_shapes": [0, 25, 25],
+        "phase_means":      [16500, 20000,20000],
+        "phase_noise_SD":   [900,1000,5250],
+        "phase_shape_type": ["NA", "Square", "Square"],
+        "overlap":          "false",
+
+        "batch_size":       3
+    },
+
+    "square and circle": {
+        "use": "This is used for the initial graph to show that MUNET14 fails with square circle problem with different colours",
+        "network_name": "This is used with the architecture TODO",
+
+
+        "z_dim":        1000,
+        "y_dim":        7,
+        "x_dim":        7,
+
+        "min_radii":        [0,0,1],
+        "max_radii":        [0,1,2],
+        "phase_num_shapes": [0, 1, 1],
+        "phase_means":      [20000, 30000,30000],
+        "phase_noise_SD":   [0,0,0],
+        "phase_shape_type": ["NA", "Square", "Circle"],
+        "overlap":          "false",
+
+        "batch_size":       3
+    },
+
+    
+    "int layer": {
+        "use": "This is used for the initial graph to show that MUNET14 fails with square circle problem with different colours",
+        "network_name": "This is used with the architecture TODO",
+
+
+        "z_dim":        200,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,9,9,9,9,9],
+        "max_radii":        [0,13,13,13,13,13],
+        "phase_means":      [20000, 25000, 15000, 28000, 30000, 24000],
+        "phase_noise_SD":   [0,0,0,0,0,0],
+        "phase_shape_type": ["NA", "Square", "Square", "Square", "Square", "Square"],
+        "phase_num_shapes": [0, 10, 10, 10, 10, 10],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+    "Augmentation example mixed": {
+        "use": "This is used for the initial graph to show that MUNET14 fails with square circle problem with different colours",
+        "network_name": "This is used with the architecture TODO",
+
+
+        "z_dim":        1000,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,5,5],
+        "max_radii":        [0,13,13],
+        "phase_means":      [20000, 25000, 26700],
+        "phase_noise_SD":   [2000,2000,3000],
+        "phase_shape_type": ["NA", "Square", "Square"],
+        "phase_num_shapes": [0, 35, 10],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+    "Augmentation example pure fibre": {
+        "use": "This is used for the initial graph to show that MUNET14 fails with square circle problem with different colours",
+        "network_name": "This is used with the architecture TODO",
+
+
+        "z_dim":        1000,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,5],
+        "max_radii":        [0,13],
+        "phase_means":      [20000, 25000],
+        "phase_noise_SD":   [2000,2000],
+        "phase_shape_type": ["NA", "Square"],
+        "phase_num_shapes": [0, 35],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+    "Augmentation example pure tracer": {
+        "use": "This is used for the initial graph to show that MUNET14 fails with square circle problem with different colours",
+        "network_name": "This is used with the architecture TODO",
+
+
+        "z_dim":        1000,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,5],
+        "max_radii":        [0,13],
+        "phase_means":      [20000, 26700],
+        "phase_noise_SD":   [2000,3000],
+        "phase_shape_type": ["NA", "Square"],
+        "phase_num_shapes": [0, 35],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+
+
+
+    "noisy_background": {
+        "use": "mention what the use of this synthetic data preset is",
+        "network_name": "mention the networks that are supposed to be used with this synthetic data",
+
+        "z_dim":        500,
+        "y_dim":        40,
+        "x_dim":        40,
+
+        "min_radii":        [0],
+        "max_radii":        [0],
+        "phase_means":      [30000],
+        "phase_noise_SD":   [1000],
+        "phase_shape_type": ["NA"],
+        "phase_num_shapes": [0],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+
+
+
+
+    "int layer RGB": {
+        "use": "This is used for the initial graph to show that MUNET14 fails with square circle problem with different colours",
+        "network_name": "This is used with the architecture TODO",
+
+
+        "z_dim":        200,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,9,9,9,9,9],
+        "max_radii":        [0,13,13,13,13,13],
+        "phase_means":      [[29000,20000,20100], [20000,20000,25000], [15000,19000,15000], [28000,28000,28000], [15000,22000,22000], [24000,24000,29000]],
+        "phase_noise_SD":   [[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]],
+        "phase_shape_type": ["NA", "Square", "Square", "Square", "Square", "Square"],
+        "phase_num_shapes": [0, 10, 10, 10, 10, 10],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+    "RFL failure": {
+        "use": "This is used for showing RFL versus object size for various RFL's to show that you must have a sufficient receptive field",
+        "network_name": "mention the networks that are supposed to be used with this synthetic data",
+
+        "z_dim":        200,
+        "y_dim":        400,
+        "x_dim":        400,
+
+        "min_radii":        [0,8,8],
+        "max_radii":        [0,9,9],
+        "phase_means":      [20000, 25000, 26000],
+        "phase_noise_SD":   [0,0,0],
+        "phase_shape_type": ["NA", "Square", "Square"],
+        "phase_num_shapes": [0, 50,50],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+    "mixed": {
+        "use": "This is used for determining bounds with means and variances",
+        "network_name": "This is used with the architecture TODO",
+
+
+        "z_dim":        200,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,5],
+        "max_radii":        [0,15],
+        "phase_means":      [20000, 20000],
+        "phase_noise_SD":   [1000,1500],
+        "phase_shape_type": ["NA", "Square"],
+        "phase_num_shapes": [0, 15],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+    
+    "what we wish to segment": {
+        "use": "mention what the use of this synthetic data preset is",
+        "network_name": "mention the networks that are supposed to be used with this synthetic data",
+
+        "z_dim":        100,
+        "y_dim":        100,
+        "x_dim":        100,
+
+        "min_radii":        [0,3,3,3,5],
+        "max_radii":        [0,7,7,7,7],
+        "phase_means":      [20000, 27000, 25000, 15000, 21500],
+        "phase_noise_SD":   [1000,2000,3000,3000,2000],
+        "phase_shape_type": ["NA", "Circle", "Square", "Circle", "Square"],
+        "phase_num_shapes": [0, 4,4,4,4],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+    "squares x2": {
+        "use": "mention what the use of this synthetic data preset is",
+        "network_name": "mention the networks that are supposed to be used with this synthetic data",
+
+        "z_dim":        200,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,3,3],
+        "max_radii":        [0,7,7],
+        "phase_means":      [20000, 24000, 26000],
+        "phase_noise_SD":   [0,0,0],
+        "phase_shape_type": ["NA", "Square", "Square"],
+        "phase_num_shapes": [0, 10, 10],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+    "greyscaleone": {
+        "use": "mention what the use of this synthetic data preset is",
+        "network_name": "mention the networks that are supposed to be used with this synthetic data",
+
+        "z_dim":        200,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,3,3],
+        "max_radii":        [0,7,7],
+        "phase_means":      [20000, 24000, 26000],
+        "phase_noise_SD":   [0,0,0],
+        "phase_shape_type": ["NA", "Square", "Square"],
+        "phase_num_shapes": [0, 10, 10],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+    "RGBPathology": {
+        "use": "mention what the use of this synthetic data preset is",
+        "network_name": "mention the networks that are supposed to be used with this synthetic data",
+
+        "z_dim":        100,
+        "y_dim":        300,
+        "x_dim":        300,
+
+        "min_radii":        [0,2,5,5],
+        "max_radii":        [0,4,10,10],
+        "phase_means":      [[51456, 33280, 41984],[55456, 36280, 45984],[49456, 30280, 45984],[49256, 30080, 45584]],
+        "phase_noise_SD":   [[2000,2000,2000],[2000,2000,2000],[2000,2000,2000],[4000,2000,2000]],
+        "phase_shape_type": ["NA", "Circle", "Circle", "Circle"],
+        "phase_num_shapes": [0, 3000,50,30],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+
+
+    "RGB2": {
+        "use": "mention what the use of this synthetic data preset is",
+        "network_name": "mention the networks that are supposed to be used with this synthetic data",
+
+        "z_dim":        100,
+        "y_dim":        100,
+        "x_dim":        100,
+
+        "min_radii":        [0,4,10,10],
+        "max_radii":        [0,10,20,20],
+        "phase_means":      [[21000,23000,29000], [24000,27000,20000], [15000,3000,20400]],
+        "phase_noise_SD":   [[2000,2000,1000],[2000,2000,1000],[100,2200,50]],
+        "phase_shape_type": ["NA", "Square", "Circle"],
+        "phase_num_shapes": [0, 20,7],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    },
+
+    "template": {
+        "use": "mention what the use of this synthetic data preset is",
+        "network_name": "mention the networks that are supposed to be used with this synthetic data",
+
+        "z_dim":        200,
+        "y_dim":        200,
+        "x_dim":        200,
+
+        "min_radii":        [0,3],
+        "max_radii":        [0,7],
+        "phase_means":      [20000, 25000],
+        "phase_noise_SD":   [0,0],
+        "phase_shape_type": ["NA", "Circle"],
+        "phase_num_shapes": [0, 50],
+        "overlap":          "false",
+
+        "batch_size":       3,
+        "learning_rate":    0.00001
+    }
+}
