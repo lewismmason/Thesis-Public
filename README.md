@@ -15,10 +15,31 @@ This directory contains the majority of code related to my thesis. Data is not s
 # Uses and information
 This describes how to use various scripts and the required workflow for the synthetic and real data.
 
+## K-Origins
+The "K-Origins" layer can be found in Python/network_architectures.py and is currently called "IntensityLayer2D" and "IntensityLayer3D". Examples of how to use it are found in the various network architectures from the same file and in Python/Synthetic/synthetic_network_architectures. Initialization is shown for some of the layers in these architectures with random variables, but manual initialization is shown in Python/train3D.py and Python/Synthetic/gen_data_and_train.py prior to building the models.
+
 ## Synthetic test workflow
 
 TODO
 
 ## Real test workflow
+This section outlines how to train and run a model on new data with the pipeline.
 
-TODO
+### Training
+
+1. Obtain pure X-ray scans of both target classes (only supports two currently)
+2. Binarize (low threshold that leaves speckles) with MATLAB/create_gt_labels.m and then remove small volumes and speckles with MATLAB/remove_volumes.m
+3. Choose "desired_mean" and "desired_var" which are used in MATLAB/normalize_data.m to normalize each scan, as well as the binarization that was just created. Generally they should be the same for all scans. Make sure the variance is stretched for each scan, or that "desired_var" > var of each scan. You now have two normalized scans, and a ground truth for each
+4. Optional: Check the normalization with MATLAB/show_histogram.m or compare it with the raw data. The normalization will look "coloured in"
+5. Run Python/train3D.py to train on the scans. It uses a selected "build_architecture" which choses an architecture found in Python/network_architectures.py. This saves a network based on achieving maximum validation scores. Ignore the secondary accuracy metric, it doesn't function correctly.
+6. You now have a trained network that can be used for all samples of a specific type (for example, mixed handsheets)
+
+### Testing
+
+1. Obtain raw X-ray scan of test sample
+2. Binarize it to just remove the background, not distinguish phases (same as before)
+3. Normalize it with the same "desired_mean" and "desired_var" as before, however these actually may need to be "desired_mean + epsilon_1" and "desired_var + epsilon_2", where the epsilons are varied by trial and error, or other knowledge. It is very challening to get these scans to align, generally. And this will take the majority of your time, as you may have to run it through the network to actually see performance
+4. Use Python/segment3D.py to run the trained network on the normalized test scan. It will output 3 scans, one containing background, target class 1, and target class 2.
+5. To get the hang of it you may need to fiddle around with "desired_mean + epsilon_1" and "desired_var + epsilon_2". If something goes wrong this is likely what did, and also the training "desired_mean" and "desired_var" can be altered independently to see if that helps out.
+
+
