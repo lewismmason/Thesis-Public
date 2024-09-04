@@ -13,17 +13,21 @@ This directory contains the majority of code related to my thesis. Data is not s
 
 
 # Uses and information
-This describes how to use various scripts and the required workflow for the synthetic and real data.
+This describes how to use various scripts and the required workflow for the synthetic and real data. Note that many file paths will need to be changed as they were intentionally hardcoded.
 
 ## K-Origins
 The "K-Origins" layer can be found in Python/network_architectures.py and is currently called "IntensityLayer2D" and "IntensityLayer3D". Examples of how to use it are found in the various network architectures from the same file and in Python/Synthetic/synthetic_network_architectures. Initialization is shown for some of the layers in these architectures with random variables, but manual initialization is shown in Python/train3D.py and Python/Synthetic/gen_data_and_train.py prior to building the models.
 
 ## Synthetic test workflow
+Note: terminal may have to be opened in the parent directory (Python) and then changed to Synthetic directory (cd Synthetic) so that Python/network_architectures.py exists in path. This is a bug
 
-TODO
+1. Create the synthetic data parameters using Python/Synthetic/synthetic_params.json which can be either RGB or greyscale
+2. Create a network architecture in Python/Synthetic/synthetic_network_architectures.py or use a pre-existing one
+3. Create data and train with Python/Synthetic/gen_data_and_train.py based on the "params_name" and "build_architecture". The first part creates the synthetic data and ground truth for it. The second part trains the network
+4. Using the trained network, run Python/Synthetic/synthetic_test2D.py to run the network on data. May need to run gen_data_and_train.py again but with the "train_also" flag set to false. Can also do this to test other data for the same network
 
 ## Real test workflow
-This section outlines how to train and run a model on new data with the pipeline.
+This section outlines how to train and run a model on real data with the pipeline.
 
 ### Training
 
