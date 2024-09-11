@@ -2,7 +2,7 @@
 This directory contains the majority of code related to my thesis. Data is not stored here as it is too large. The work in this repository is entirely written and designed by Lewis Mason. Locations where external sources were used are listed (such as forums and ChatGPT).
 
 # Software versions and setup for my laptop 
-* x64, NVIDIA RTX 2070 MAX-q (My laptop was used for synthetic data ML, but a different desctop was used for the X-ray scan segmentation paper (An LaVision unit with an RTX4060Ti, required different versions)
+* x64, NVIDIA RTX 2070 MAX-q (My laptop was used for synthetic data ML, but a different desctop was used for the X-ray scan segmentation paper (An LaVision unit with an RTX4060Ti, required different versions))
 * Python 3.10.9
 * Compatibilities: 			https://www.tensorflow.org/install/source#gpu
 * Tensorflow 2.11.0       		(pip install tensorflow) 
